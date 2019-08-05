@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> O'Briens Irish Sandwich - Homepage </title> 
+		<meta name = "descripition" content = "Web Development CA-1" />
+		<meta name = "keywords" content = "sandwich, coffee, bagel, sandwiches, ireland, soup, salad" />
+		<meta "author" content = "Regiane Ivo" />
+		<meta charset = "utf-8" />
+		
+		<!-- StyleSheet -->
+		<link rel = "stylesheet" type = "text/css" href = "style.css" />
+		<link rel = "stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<body>
+		<!-- navbar  -->
+		<div id = "navbar-default">
+			<ul class = "navbar">
+				<li class = "nav" style = "float: right"><a href = "contact.html"> Contact us </a></li>
+				<li class = "nav" style = "float: right"><a href = "about.html"> About us </a></li>
+				<li class = "nav" style = "float: right"><a href = "gallery.html"> Gallery </a></li>
+				<li class = "nav" style = "float: right"><a href = "products.html"> Products </a></li>
+			<ul>
+		</div>
+		<!-- logo obriens navbar -->			
+		<div id	= "logoimagem">
+			<a href = "index.html"><img src="logo1.jpg" width="350" height="152"></a>
+		</div>
+		<!-- Slideshow  -->
+		<header class = "w3-row w3-padding-128" style = "max-width" >
+			<div class = "w3-row w3-padding-128">
+				<img class = "slideShow" src = "slider1.jpg" style = "width: 100%">
+				<img class = "slideShow" src = "slider2.jpg" style = "width: 100%">
+				<img class = "slideShow" src = "slider3.jpg" style = "width: 100%">
+				<img class = "slideShow" src = "slider4.jpg" style = "width: 100%">
+			</div>
+			<script>
+				var myIndex = 0;
+				carousel();
+				function carousel() {
+					var i;
+					var x = document.getElementsByClassName("slideShow");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";  
+					}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}    
+						x[myIndex-1].style.display = "block";  
+						setTimeout(carousel, 2000); // Change image every 2 seconds
+				}	
+			</script>
+		</header>
+		<!-- Social Media Links and buttons -->
+		<div id : "social-media">
+			<label for = "socialmedia"> Follow us </label>
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<label for = "email"> Join our e-mail list: </label>
+			<input id = "name" type = "text" placeholder = "E-mail address" />
+			<input type = "submit" value= "Get Started" />
+		</div>
+		<!-- Footer -->
+		<footer>
+			<p>Posted by: Regiane Ivo</p>
+			<p>Contact information:<a href="mailto:regiane.ivo@hotmail.com">regiane.ivo@hotmail.com</a>.</p>
+		</footer>
+	</body>
+</html>
